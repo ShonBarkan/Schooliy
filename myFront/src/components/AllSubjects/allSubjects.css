@@ -1,0 +1,204 @@
+.bigPageSubjects{
+    text-align: center;
+    color: white;
+}
+.bigLogo{
+  width: 700px;
+}
+
+.bigPageSubjects .head{
+    font-size: 4.5vw;
+}
+.bigPageSubjects .introduction{
+    font-size: 1.5vw;
+}
+
+.subjectsPage{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(400px,95%)) ;
+   /* gap: 20px; */
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+
+
+.subject{
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 30%;
+   position: relative;
+   height: 350px;
+   overflow: hidden;
+}
+.subject .subjectAfterHover{
+   display: grid;
+   height: 100%;
+   width: 80%;
+   grid-template-rows:80% 20%;
+   transition: top 1s;
+   text-align: center;
+   position: absolute;
+   top: 150%;
+   transform: translateY(-50%);
+   overflow: hidden;
+}
+
+.subMain{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.subMain .MainTop{
+    display: flex;
+    gap: 100px;
+    font-size: 3vw;
+    margin-top: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.subMain .aboutSub{
+    font-size: 1.1vw;
+} 
+.subEnd{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.subject .subjectBeforeHover{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition-duration:  1s;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   gap: 30px;
+}
+.kotert{
+   font-size: 4vw;
+   margin: 0;
+}
+.pics{
+   width: 12vw;
+   margin: 0;
+}
+
+.subject:hover .subjectAfterHover {
+   top: 50%;
+ }
+
+.subject:hover .subjectBeforeHover {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    gap: 0;
+ }
+
+.subject:hover .pics {
+    width: 10vw
+;}
+
+
+/* ---------------------------------------------------------- */
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+    margin-bottom: 2%;
+  }
+  
+  .add-btn:hover {
+    width: 300px;
+  }
+  
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: seagreen;
+  }
+  
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .icon-btn:focus {
+    outline: none;
+  }
+  
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: seagreen;
+    overflow: hidden;
+  }
+  
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }

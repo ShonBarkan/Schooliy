@@ -1,0 +1,239 @@
+.bigPageMyCourses{
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    color: white;
+    min-height: 90vh;
+}
+.bigPageMyCourses .noCourse{
+    margin-top: 10%;
+}
+
+.bigPageMyCourses .head{
+    font-size: 4.5vw;
+}
+.bigPageMyCourses .introduction{
+    font-size: 1.5vw;
+}
+
+.MysubjectsPage * { 
+     color: white;}
+
+.MysubjectsPage{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,20%)) ;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Mysubject{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid whitesmoke;
+    background-color: lightgrey;
+    border-radius: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+   
+}
+.Mysubject .MysubjectAfterHover{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows:80% 20%;
+    transition: top 1s;
+    text-align: center;
+    position: absolute;
+    top: 150%;
+    transform: translateY(-50%);
+
+}
+.MysubjectAfterHover .subMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid whitesmoke;
+}
+
+.MysubjectAfterHover .subEnd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid whitesmoke;
+
+}
+
+.Mysubject .MysubjectBeforeHover{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 1s;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+}
+.kotert{
+    font-size: 4vw;
+}
+
+.Mysubject:hover .MysubjectAfterHover {
+    background-color: rgba(45, 44, 42, 0.9);
+    top: 50%;
+  }
+.Mysubject:hover .MysubjectBeforeHover {
+    top: 10%;
+  }
+
+
+/* --------------------------------------------------------------- */
+.delet {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .delet:hover {
+    filter: brightness(110%);
+   }
+   
+   .delet:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .delet:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   .delet:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .delet:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   .delet:focus:not(:focus-visible) {
+    outline: none;
+   }
+
+
+/* ---------------------------------------------------------------- */
+.toAllCourses {
+    height: 2.8em;
+    width: 9em;
+    background: transparent;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    border: 2px solid #ed2334;
+    outline: none;
+    background: #ed2334;
+    color: #ffffff;    font-size: 17px;
+   }
+   
+   .toAllCourses:hover {
+    animation: squeeze3124 0.9s both;
+   }
+   
+   @keyframes squeeze3124 {
+    0% {
+     -webkit-transform: scale3d(1, 1, 1);
+     transform: scale3d(1, 1, 1);
+    }
+   
+    30% {
+     -webkit-transform: scale3d(1.25, 0.75, 1);
+     transform: scale3d(1.25, 0.75, 1);
+    }
+   
+    40% {
+     -webkit-transform: scale3d(0.75, 1.25, 1);
+     transform: scale3d(0.75, 1.25, 1);
+    }
+   
+    50% {
+     -webkit-transform: scale3d(1.15, 0.85, 1);
+     transform: scale3d(1.15, 0.85, 1);
+    }
+   
+    65% {
+     -webkit-transform: scale3d(0.95, 1.05, 1);
+     transform: scale3d(0.95, 1.05, 1);
+    }
+   
+    75% {
+     -webkit-transform: scale3d(1.05, 0.95, 1);
+     transform: scale3d(1.05, 0.95, 1);
+    }
+   
+    100% {
+     -webkit-transform: scale3d(1, 1, 1);
+     transform: scale3d(1, 1, 1);
+    }
+   }
+   

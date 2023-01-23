@@ -1,0 +1,48 @@
+ .smallLogo{
+    /* mix-blend-mode:hard-light; */
+    width: 250px;
+    height: 90px;
+}
+.myNavBar{
+  display: flex;
+  width: 99%;
+  background-color: rgb(63, 63, 64);
+  justify-content: space-between;
+}
+.bar{
+  background-color: rgb(63, 63, 64);
+width: 100%;
+display: flex;
+}
+
+.navLinks{
+  display: flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 30px 45px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navLinks:hover {
+  background-color: #111;
+}
+
+#logOut {
+  color: #ecf0f1;
+  font-size: 20px;
+  height: 50px;
+  margin: 10px;
+  background-color: #e62222;
+  border: 1px solid #f31212;
+  border-radius: 5px;
+  box-shadow: 0px 6px 0px #d30000;
+  transition: all .1s;
+ }
+ 
+ #logOut:active {
+  box-shadow: 0px 2px 0px #d30000;
+  position: relative;
+  top: 2px;
+ }
